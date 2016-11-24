@@ -1,0 +1,97 @@
+{
+    "admin key": "IZTS4B",
+    "players ready": 4,
+    "players": [
+        {
+            "key": "COXLDG",
+            "id": 0,
+            "rounds": [
+                {
+                    "total extraction": 15,
+                    "gain_penalty": -176.0,
+                    "gain": 397.5,
+                    "penalty": 175.0,
+                    "extraction": 1,
+                    "other extraction": 14
+                }
+            ],
+            "can play": true,
+            "asigned": true
+        },
+        {
+            "key": "1U3TGG",
+            "id": 1,
+            "rounds": [
+                {
+                    "other extraction": 11,
+                    "total extraction": 15,
+                    "extraction": 4,
+                    "gain": 540.0,
+                    "penalty": 0.0,
+                    "gain_penalty": -1.0
+                }
+            ],
+            "can play": true,
+            "asigned": true
+        },
+        {
+            "key": "5EQQZ6",
+            "id": 2,
+            "rounds": [
+                {
+                    "penalty": 0.0,
+                    "total extraction": 15,
+                    "other extraction": 12,
+                    "gain": 497.5,
+                    "extraction": 3,
+                    "gain_penalty": -1.0
+                }
+            ],
+            "can play": true,
+            "asigned": true
+        },
+        {
+            "key": "Y6VBMZ",
+            "id": 3,
+            "rounds": [
+                {
+                    "total extraction": 15,
+                    "gain_penalty": -1.0,
+                    "gain": 637.5,
+                    "extraction": 7,
+                    "penalty": 0.0,
+                    "other extraction": 8
+                }
+            ],
+            "can play": true,
+            "asigned": true
+        }
+    ],
+    "parameters": [
+        60,
+        5,
+        20,
+        8
+    ],
+    "game id": 4,
+    "end": false,
+    "rules": {
+        "high regulation": {
+            "penalty": 175,
+            "round": 2
+        },
+        "low regulation": {
+            "penalty": 50,
+            "round": 3
+        },
+        "comunication": {
+            "time": 5,
+            "round": 4
+        }
+    },
+    "date": "2016-11-24 13:02:50.567851",
+    "rounds number": 20,
+    "players number": 4,
+    "round actual": 2,
+    "state": "waiting players (4/4)"
+}

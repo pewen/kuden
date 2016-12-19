@@ -10,19 +10,18 @@ clonar kuden en el directorio seleccionado (en este ej. /var/www/kuden)
 
 ```
 $ cd /var/www/
-/var/www/html $ git clone https://github.com/pewen/kuden.git
+/var/www $ git clone https://github.com/pewen/kuden.git
 ```
 
 Install Python3 versions of required tools & libraries
 
 ```
-# apt-get -y install python3 ipython3 python3-flask python3-numpy
+# apt-get -y install python3 python3-flask python3-numpy python3-pip
 ```
 
-Install pip3 && Python modules
+Install Python modules from pip3
 
 ```
-# apt install python3-pip
 # pip3 install -U flask-cors
 # pip3 install -U flask-socketio
 ```

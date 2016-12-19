@@ -24,7 +24,7 @@ Install pip3 && Python modules
 ```
 # apt install python3-pip
 # pip3 install -U flask-cors
-# pip3 install flask-socketio
+# pip3 install -U flask-socketio
 ```
 
 Install Mod_wsgi for running Python3 with Apache

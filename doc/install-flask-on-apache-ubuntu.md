@@ -33,4 +33,4 @@ Install Mod_wsgi for running Python3 with Apache
 ```
 
 Ref:  
-https://terokarvinen.com/2016/deploy-flask-python3-on-apache2-ubuntu
+http://terokarvinen.com/2016/deploy-flask-python3-on-apache2-ubuntu

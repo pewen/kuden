@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+  {% include head.html %}
+
+  <body  data-spy="scroll" data-target="#myNavbar" data-offset="100">
+    <header class="header-hidden">
+      <h1>La tragedia de los comunes</h1>
+    </header>
+
+    {% include nav-bar.html %}
+
+    {{ content }}
+
+    {% if site.debug %}
+    {% include toc.html %}
+    {% endif %}
+    
+    {% include footer.html %}
+    {% include js_scripts.html %}
+  </body>
+</html>

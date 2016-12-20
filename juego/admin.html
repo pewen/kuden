@@ -1,0 +1,63 @@
+---
+layout: default
+title: Admin
+---
+
+<!-- Admin -->
+<!-- ===== -->
+<section id="admin-info">
+  <div class="container">
+    
+    <h2>Moderador del juego</h2>
+
+    <div class="game-info">
+      <p id="gameNumber">Número de juego: , clave: </p>
+      <p id="playersNumber">Número de jugadores: (0/)</p>
+      <p id="roundsNumber">Número de rondas: (0/)</p>
+    </div><!--/game-info -->
+    
+    <div id="playersData">
+    </div><!--/playersData -->
+
+  </div><!--/container -->
+</section><!--/game -->
+
+
+
+<!-- Modal waiting players -->
+<!-- ===================== -->
+<div class="modal fade bs-example-modal-lg" id="waitingPlayersModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Esperando a los jugadores</h4>
+      </div><!--/modal-header -->
+      
+      <div class="modal-body">
+	<div class="row" id="waitingPlayers">
+          ---
+	</div><!--/row -->
+
+	<div class"">
+	  <p class="waitingSquare" id="gameIdNumber"></p>
+	</div>
+	
+      </div><!--/modal-body -->
+
+    </div><!--/modal-content -->
+  </div><!--/modal-dialog -->
+</div><!--/modal fade -->
+
+<!-- Used to put background-image in waiting-players-modal -->
+<div class="waiting-background"></div>
+
+
+<!-- highcharts -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<!-- Socket.io -->
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<!-- Personal scripts -->
+<script src="{{ "/js/admin.js" | prepend: site.baseurl }}"></script>
+

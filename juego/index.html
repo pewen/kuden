@@ -1,0 +1,103 @@
+---
+layout: default
+title: Jugador
+---
+
+<div class="container-fluid">
+  <div class="row">
+    <h2>Juego</h2>
+    
+    <!-- Juego -->
+    <!-- ===== -->
+    <div class="col-sm-9 col-md-9">
+      <section id="game">
+	
+	<!-- Información general del juego -->
+	<header class="game-info">
+	  <h3>Información general</h3>
+	  <p id="playersNumber">Número de jugadores: (0/)</p>
+	  <p id="roundsNumber">Número de rondas: (0/)</p>
+	</header><!--/game-info -->
+
+	<!-- Boxes -->
+	<div id="playersBoxes" class="row">
+	</div><!--/#playersBoxes -->
+	<div id="personalBox" class="row">
+	</div><!--/#personalBox-->
+	
+      </section><!--/#game -->
+    </div><!--col-md-9 -->
+    
+    <!-- Reglas -->
+    <!-- ====== -->
+    <div class="col-sm-3 col-md-3">
+      <section id="rules">
+	<h3>Reglas</h3>
+	<div id="rules-column">
+	</div><!--/rules-column -->
+      </section><!--/#rules -->
+    </div><!--col-md-3 -->
+    
+  </div><!--/row -->
+
+
+  <!-- Communication div -->
+  <!-- ================= -->
+  <div class="row" style="float: right;">
+    <div id="chatFrame" class="header-hidden">
+    </div><!--/#chatFrame -->
+  </div><!--/row -->
+
+  <div class="row">
+    <section id="player-info">
+      <header class="header-hidden">
+	<h2>Información del jugador</h2>
+      </header>
+
+      <!-- Tabla de datos -->
+      <div id="dataTable" class="col-md-6">
+      </div><!--/col-md-6 -->
+
+      <!-- Plot de datos -->
+      <div id="dataPlot" class="col-md-6">
+      </div><!--/col-md-6 -->
+      
+    </section><!--/#player-info -->
+  </div><!--/row -->
+</div><!--/container -->
+
+
+
+<!-- Modal waiting players -->
+<!-- ===================== -->
+<div class="modal fade bs-example-modal-lg" id="waitingPlayersModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Esperando a los jugadores</h4>
+      </div><!--/modal-header -->
+      
+      <div class="modal-body">
+	<div class="row" id="waitingPlayers">
+          ---
+	</div><!--/row -->
+      </div><!--/modal-body -->
+
+    </div><!--/modal-content -->
+  </div><!--/modal-dialog -->
+</div><!--/modal fade -->
+
+<!-- Used to put background-image in waiting-players-modal -->
+<div class="waiting-background"></div>
+
+
+<!-- Bootstrap-dialog -->
+<script src="{{ "/js/bootstrap-dialog.min.js" | prepend: site.baseurl }}"></script>
+<!-- highcharts -->
+<script src="{{ "/js/highcharts.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/exporting.js" | prepend: site.baseurl }}"></script>
+<!-- Socket.io -->
+<script src="{{ "/js/socket.io-1.4.5.js" | prepend: site.baseurl }}"></script>
+<!-- Personal scripts -->
+<script src="{{ "/js/player.js" | prepend: site.baseurl }}"></script>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Kuden | Jugador</title>
+  
+  <link rel="canonical" href="http://127.0.0.1:4000/juego/">
+  <link rel="alternate" type="application/rss+xml" title="Kuden" href="http://127.0.0.1:4000/feed.xml">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="/libraries/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="/css/animate.css">
+  <!-- Personal CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- JQuery -->
+  <script src="/libraries/jquery-1.10.2.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+
+  <body  data-spy="scroll" data-target="#myNavbar" data-offset="100">
+    <header class="header-hidden">
+      <h1>La tragedia de los comunes</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+<!-- ============== -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <header class="header-hidden">
+    <h2>Menú de Navegación</h2>
+  </header>
+
+  <div class="container-fluid" style="padding-top: 10px; padding-bottom: 10px;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div><!--/ navbar-header -->
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="http://127.0.0.1:4000">Inicio</a></li>
+        <li><a href="#">Nuevo Juego</a></li>
+	<li><a href="#">Unirme</a></li>
+	<li><a href="#">Loby</a></li>
+	<li><a href="#">Estadísticas</a></li>
+	<li><a href="#">API</a></li>
+      </ul>
+    </div><!--/ collapse navbar-collapse -->
+  </div><!--/ container-fluid -->
+</nav>
+
+
+    <div class="container-fluid">
+  <div class="row">
+    <h2>Juego</h2>
+    
+    <!-- Juego -->
+    <!-- ===== -->
+    <div class="col-sm-9 col-md-9">
+      <section id="game">
+	
+	<!-- Información general del juego -->
+	<header class="game-info">
+	  <h3>Información general</h3>
+	  <p id="playersNumber">Número de jugadores: (0/)</p>
+	  <p id="roundsNumber">Número de rondas: (0/)</p>
+	</header><!--/game-info -->
+
+	<!-- Boxes -->
+	<div id="playersBoxes" class="row">
+	</div><!--/#playersBoxes -->
+	<div id="personalBox" class="row">
+	</div><!--/#personalBox-->
+	
+      </section><!--/#game -->
+    </div><!--col-md-9 -->
+    
+    <!-- Reglas -->
+    <!-- ====== -->
+    <div class="col-sm-3 col-md-3">
+      <section id="rules">
+	<h3>Reglas</h3>
+	<div id="rules-column">
+	</div><!--/rules-column -->
+      </section><!--/#rules -->
+    </div><!--col-md-3 -->
+    
+  </div><!--/row -->
+
+
+  <!-- Communication div -->
+  <!-- ================= -->
+  <div class="row" style="float: right;">
+    <div id="chatFrame" class="header-hidden">
+    </div><!--/#chatFrame -->
+  </div><!--/row -->
+
+  <div class="row">
+    <section id="player-info">
+      <header class="header-hidden">
+	<h2>Información del jugador</h2>
+      </header>
+
+      <!-- Tabla de datos -->
+      <div id="dataTable" class="col-md-6">
+      </div><!--/col-md-6 -->
+
+      <!-- Plot de datos -->
+      <div id="dataPlot" class="col-md-6">
+      </div><!--/col-md-6 -->
+      
+    </section><!--/#player-info -->
+  </div><!--/row -->
+</div><!--/container -->
+
+
+
+<!-- Modal waiting players -->
+<!-- ===================== -->
+<div class="modal fade bs-example-modal-lg" id="waitingPlayersModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Esperando a los jugadores</h4>
+      </div><!--/modal-header -->
+      
+      <div class="modal-body">
+	<div class="row" id="waitingPlayers">
+          ---
+	</div><!--/row -->
+      </div><!--/modal-body -->
+
+    </div><!--/modal-content -->
+  </div><!--/modal-dialog -->
+</div><!--/modal fade -->
+
+<!-- Used to put background-image in waiting-players-modal -->
+<div class="waiting-background"></div>
+
+
+<!-- Bootstrap-dialog -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
+<!-- highcharts -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<!-- Socket.io -->
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<!-- Personal scripts -->
+<script src="/js/player.js"></script>
+
+
+    
+    
+    <!-- footer -->
+<!-- ====== -->
+<footer id="footer">
+  <h2 class="header-hidden">Footer</h2>
+  <div class="footer section">
+    <div class="container">
+
+      <div class="footer-texto">
+      </div><!--/footer-texto -->
+	
+    </div><!--/container -->
+  </div><!--/footer -->
+</footer>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+<!-- ========================================================== -->
+<!-- Change nav-bar color -->
+<script src="/js/change_navbar_color.js"></script>
+
+  </body>
+</html>

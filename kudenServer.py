@@ -109,6 +109,12 @@ Public Methods
 """
 
 
+@app.route("/hola")
+def hola():
+    data = {'data': 'Hola mundo desde Kuden'}
+    return jsonify(data)
+
+
 @app.route("/api/v1.0/new_game", methods=['POST'])
 def new_game():
     """

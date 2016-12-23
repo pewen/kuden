@@ -14,6 +14,7 @@ $(document).ready(function(){
     
     // Connect to the Socket.IO server.
     var url_base = "http://127.0.0.1:5000";
+    var url_base = "https://mail.evelia.unrc.edu.ar/kuden";
     var namespace = '/admin';
     var socket = io.connect(url_base + namespace,
 			    {query:connect_parameters});

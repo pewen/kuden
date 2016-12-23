@@ -1,5 +1,5 @@
 var base_url = "http://127.0.0.1:5000/api/v1.0";
-
+var base_url = "https://mail.evelia.unrc.edu.ar/kuden/api/v1.0";
 
 function showKeyInput(){
     document.getElementById('playerKeyInput').className = "form-group";

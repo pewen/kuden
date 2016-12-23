@@ -1,10 +1,7 @@
-var base_url = "http://127.0.0.1:5000/api/v1.0";
-var base_url = "https://mail.evelia.unrc.edu.ar/kuden/api/v1.0";
-
 function addCooperativeBot(i){
     /*
       Agrega un nuevo bot cooperativo
-     */
+    */
     var cooperativeDiv = document.getElementById("cooperativeDiv");
     var div = document.createElement('div');
     div.innerHTML = '<div class="row input-line">' +
@@ -34,7 +31,7 @@ function newGameRequest(coop_total){
 
       TODO:
       * Falta chequear que todos las entradas sean correctas
-     */
+      */
     // Basic configuraion
     var players_number = +document.getElementById("playersNumber").value;
     var rounds_number = +document.getElementById("roundsNumber").value;
@@ -113,7 +110,7 @@ function newGameRequest(coop_total){
     // Make the post to the server
     $.ajax({
         type: "POST",
-        url: base_url + "/new_game",
+        url: url_base + "/api/v1.0/new_game",
 	data: JSON.stringify(requestJson),
 	contentType: "application/json; charset=utf-8",
 	dataType: "json",

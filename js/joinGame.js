@@ -1,6 +1,3 @@
-var base_url = "http://127.0.0.1:5000/api/v1.0";
-var base_url = "https://mail.evelia.unrc.edu.ar/kuden/api/v1.0";
-
 function showKeyInput(){
     document.getElementById('playerKeyInput').className = "form-group";
 }
@@ -17,7 +14,7 @@ function joinGameRequest(){
     
     $.ajax({
         type: "POST",
-        url: base_url + "/join",
+        url: url_base + "/api/v1.0/join",
 	data: JSON.stringify(requestJson),
 	contentType: "application/json; charset=utf-8",
 	dataType: "json",

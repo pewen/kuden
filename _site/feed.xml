@@ -4,10 +4,10 @@
     <title>Kuden</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://127.0.0.1:4000/</link>
-    <atom:link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Dec 2016 14:59:00 -0300</pubDate>
-    <lastBuildDate>Fri, 02 Dec 2016 14:59:00 -0300</lastBuildDate>
+    <link>https://pewen.github.io/kuden//</link>
+    <atom:link href="https://pewen.github.io/kuden//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 23 Dec 2016 13:30:13 -0300</pubDate>
+    <lastBuildDate>Fri, 23 Dec 2016 13:30:13 -0300</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Wed, 02 Nov 2016 20:56:46 -0300</pubDate>
-        <link>http://127.0.0.1:4000/jekyll/update/2016/11/02/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/jekyll/update/2016/11/02/welcome-to-jekyll/</guid>
+        <link>https://pewen.github.io/kuden//jekyll/update/2016/11/02/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">https://pewen.github.io/kuden//jekyll/update/2016/11/02/welcome-to-jekyll/</guid>
         
         
         <category>jekyll</category>

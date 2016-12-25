@@ -23,7 +23,7 @@ function joinGameRequest(){
 	    // Hide modal
 	    $('#JoinGameModal').modal('hide');
 	    // redirect
-	    var new_url = '/juego/?game_id=' + game_id +
+	    var new_url = '/kuden/juego/?game_id=' + game_id +
 		'&player_id=' + response['player id'] +
 		'&player_key=' + response['player key'];
 	    window.location.href = new_url;

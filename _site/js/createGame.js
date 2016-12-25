@@ -118,7 +118,7 @@ function newGameRequest(coop_total){
 	    // Hide modal
 	    $('#CreateGameModal').modal('hide');
 	    // redirect
-	    var new_url = '/juego/admin/?game_id=' + response['game id'] +
+	    var new_url = '/kuden/juego/admin/?game_id=' + response['game id'] +
 		'&admin_key=' + response['admin key'];
 	    window.location.href = new_url;
 	},

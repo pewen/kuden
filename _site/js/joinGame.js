@@ -14,7 +14,7 @@ function joinGameRequest(){
     
     $.ajax({
         type: "POST",
-        url: url_base + "/api/v1.0/join",
+        url: url_base + "/api/v1.0/join/" + game_id,
 	data: JSON.stringify(requestJson),
 	contentType: "application/json; charset=utf-8",
 	dataType: "json",

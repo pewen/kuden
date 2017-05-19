@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Kuden | Inicio</title>
+  
+  <link rel="canonical" href="https://pewen.github.io//kuden/">
+  <link rel="alternate" type="application/rss+xml" title="Kuden" href="https://pewen.github.io//kuden/feed.xml">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/kuden/libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="/kuden/libraries/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="/kuden/css/animate.css">
+  <!-- Personal CSS -->
+  <link rel="stylesheet" href="/kuden/css/main.css">
+  <!-- JQuery -->
+  <script src="/kuden/libraries/jquery-1.10.2.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+
+  <body  data-spy="scroll" data-target="#myNavbar" data-offset="100">
+    <header class="header-hidden">
+      <h1>La tragedia de los comunes</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+<!-- ============== -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <header class="header-hidden">
+    <h2>Menú de Navegación</h2>
+  </header>
+
+  <div class="container-fluid" style="padding-top: 10px; padding-bottom: 10px;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div><!--/ navbar-header -->
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="https://pewen.github.io/">Inicio</a></li>
+        <li><a href="#">Nuevo Juego</a></li>
+	<li><a href="#">Unirme</a></li>
+	<li><a href="#">Loby</a></li>
+	<li><a href="#">Estadísticas</a></li>
+	<li><a href="#">API</a></li>
+      </ul>
+    </div><!--/ collapse navbar-collapse -->
+  </div><!--/ container-fluid -->
+</nav>
+
+
+    <!-- Main banner -->
+<!-- =========== -->
+<section id="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+	<h2>Recuros de Uso Común</h2>
+
+	<div class="start-buttons">
+	  <!-- New Game -->
+	  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CreateGameModal">
+	    Nuevo Juego
+	  </button>
+	  <!-- Join Game -->
+	  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#JoinGameModal">
+	    Unirme a un Juego
+	  </button>
+	</div>
+	
+      </div><!--/col -->
+    </div><!--/row -->
+  </div><!--/container -->
+</section><!--/banner -->
+
+
+<!-- Modal create new game -->
+<!-- ===================== -->
+<div class="modal fade bs-example-modal-lg" id="CreateGameModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	  <span aria-hidden="true">&times;</span>
+	</button>
+        <h3 class="modal-title">Crear un nuevo juego</h3>
+      </div><!--/modal-header -->
+      
+      <div class="modal-body">
+
+	<div>
+	  <!-- Nav tabs -->
+	  <ul class="nav nav-tabs" role="tablist">
+	    <li role="presentation" class="active">
+	      <a href="#conf_basic" role="tab" data-toggle="tab">Configuración básica</a>
+	    </li>
+	    <li role="presentation">
+	      <a href="#rules" role="tab" data-toggle="tab">Reglas</a>
+	    </li>
+	    <li role="presentation">
+	      <a href="#bots" role="tab" data-toggle="tab">Bots</a>
+	    </li>
+	  </ul>
+
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+
+	    <!-- Basic Configuration -->
+	    <!-- =================== -->
+	    <div role="tabpanel" class="tab-pane active" id="conf_basic">
+              <form class="form-horizontal">
+		<!-- Form Numero de Jugadores -->
+		<div class="form-group">
+		  <label for="playersNumber" class="col-xs-4 col-sm-4 control-label">
+		    Número de Jugadores:
+		  </label>
+		  <div class="col-xs-4 col-sm-4">
+		    <input type="number" min="4" max="8" value="4" class="form-control" id="playersNumber">
+		  </div><!--/col-sm-3 -->
+		</div><!--/form-group -->
+		
+		<!-- Form Numero de rondas -->
+		<div class="form-group">
+		  <label for="roundsNumber" class="col-xs-4 col-sm-4 control-label">
+		    Número de Rondas
+		  </label>
+		  <div class="col-xs-4 col-sm-4">
+		    <input type="number" min="10" max="1000" value="20" class="form-control" id="roundsNumber">
+		  </div><!--/col-sm-3 -->
+		</div><!--/form-group -->
+
+		<!-- Form Numero de Jugadores -->
+		<div class="form-group">
+		  <label for="gameName" class="col-xs-4 col-sm-4 control-label">
+		    Nombre del Juego:
+		  </label>
+		  <div class="col-xs-4 col-sm-4">
+		    <input type="text" class="form-control" id="gameName">
+		  </div><!--/col-sm-3 -->
+		</div><!--/form-group -->
+
+		<!-- Form Parametros -->
+		<div class="form-group">
+		  <fieldset>
+		    <label class="col-xs-4 col-sm-4 control-label">
+		      Parámetros (\(a, b, \alpha, e\)):
+		    </label>
+		    <div class="col-xs-2 col-sm-2">
+		      <input type="number" min="0" max="1000" value="60" class="form-control" id="parameterA">
+		    </div><!--/col-sm-2 -->
+		    <div class="col-xs-2 col-sm-2">
+		      <input type="number" min="0" max="1000" value="5" class="form-control" id="parameterB">
+		    </div><!--/col-sm-2 -->
+		    <div class="col-xs-2 col-sm-2">
+		      <input type="number" min="0" max="1000" value="20" class="form-control" id="parameterAlfa">
+		    </div><!--/col-sm-2 -->
+		    <div class="col-xs-2 col-sm-2">
+		      <input type="number" min="0" max="1000" value="8" class="form-control" id="parameterE">
+		    </div><!--/col-sm-2 -->
+		  </fieldset>
+		</div><!--/form-group -->
+
+		$$ Ganancia = (a x_i - \frac{1}{2}b x_i^2) + \alpha  \sum_{k=1}^N (e - x_k)$$
+		
+              </form>
+	    </div><!--/tab-pane active -->
+
+	    <!-- Rules -->
+	    <!-- ===== -->
+	    <div role="tabpanel" class="tab-pane" id="rules">
+	      <!-- Comunication -->
+	      <div class="row input-line">
+		<div class="col-xs-5 col-sm-3">
+		  <label for="comRule">Comunicación:</label>
+		</div>
+		<div class="col-xs-1 col-sm-1">
+		  <input type="checkbox" id="comRule">
+		</div><!--/col-sm-1 -->
+
+		<div class="col-xs-3 col-sm-2">
+		  <label for="comRuleRound">Ronda:</label>
+		</div>
+		<div class="col-xs-3 col-sm-2">
+		  <input type="number" min="0" class="form-control" id="comRuleRound">
+		</div>
+
+		<div class="col-xs-3 col-sm-2">
+		  <label for="comRuleTime">Tiempo:</label>
+		</div>
+		<div class="col-xs-3 col-sm-2">
+		  <input type="number" min="0" value="5" class="form-control" id="comRuleTime">
+		</div>
+	      </div><!--/row -->
+
+	      <!-- Regulación alta -->
+	      <div class="row input-line">
+		<div class="col-xs-5 col-sm-3">
+		  <label for="raRule">Reg. alta:</label>
+		</div>
+		<div class="col-xs-1 col-sm-1">
+		  <input type="checkbox" id="raRule">
+		</div><!--/col-sm-1 -->
+
+		<div class="col-xs-3 col-sm-2">
+		  <label for="raRuleRound">Ronda:</label>
+		</div>
+		<div class="col-xs-3 col-sm-2">
+		  <input type="number" min="0" class="form-control" id="raRuleRound">
+		</div>
+
+		<div class="col-xs-3 col-sm-2">
+		  <label for="raRulePenalty">Multa:</label>
+		</div>
+		<div class="col-xs-3 col-sm-2">
+		  <input type="number" min="0" value="175" class="form-control" id="raRulePenalty">
+		</div>
+	      </div><!--/row -->
+
+	      <!-- Regulación baja -->
+	      <div class="row input-line">
+		<div class="col-xs-5 col-sm-3">
+		  <label for="rbRule">Reg. baja:</label>
+		</div>
+		<div class="col-xs-1 col-sm-1">
+		  <input type="checkbox" id="rbRule">
+		</div><!--/col-sm-1 -->
+
+		<div class="col-xs-3 col-sm-2">
+		  <label for="rbRuleRound">Ronda:</label>
+		</div>
+		<div class="col-xs-3 col-sm-2">
+		  <input type="number" min="0" class="form-control" id="rbRuleRound">
+		</div>
+
+		<div class="col-xs-3 col-sm-2">
+		  <label for="rbRulePenalty">Multa:</label>
+		</div>
+		<div class="col-xs-3 col-sm-2">
+		  <input type="number" min="0" value="50" class="form-control" id="rbRulePenalty">
+		</div>
+	      </div><!--/row -->
+	      
+	      <!-- Mostrar rondas -->
+	      <div class="row input-line">
+		<div class="col-xs-4 col-sm-4">
+		  <label for="srRule">Mostar número máximo de rondas:</label>
+		</div>
+		<div class="col-xs-1 col-sm-1">
+		  <input type="checkbox" id="srRule">
+		</div><!--/col-sm-1 -->
+	      </div><!--/row -->
+	    </div><!--/tab-pane -->
+
+	    <!-- Bots -->
+	    <!-- ==== -->
+	    <div role="tabpanel" class="tab-pane" id="bots">
+	      <!-- Free runners -->
+	      <div class="row input-line">
+		<div class="col-xs-3 col-sm-3">
+		  <label for="freeRunner">Free Runner:</label>
+		</div>
+		<div class="col-xs-1 col-sm-1">
+		  <input type="checkbox" id="freeRunner">
+		</div><!--/col-sm-1 -->
+
+		<div class="col-xs-2 col-sm-2">
+		  <label for="freeRunnerNumber">Cantidad:</label>
+		</div>
+		<div class="col-xs-2 col-sm-2">
+		  <input type="number" min="0" class="form-control" id="freeRunnerNumber">
+		</div>
+	      </div><!--/row -->
+
+	      <!-- Altruista -->
+	      <div class="row input-line">
+		<div class="col-xs-3 col-sm-3">
+		  <label for="altruista">Altruista:</label>
+		</div>
+		<div class="col-xs-1 col-sm-1">
+		  <input type="checkbox" id="altruista">
+		</div><!--/col-sm-1 -->
+
+		<div class="col-xs-2 col-sm-2">
+		  <label for="altruistaNumber">Cantidad:</label>
+		</div>
+		<div class="col-xs-2 col-sm-2">
+		  <input type="number" min="0" class="form-control" id="altruistaNumber">
+		</div>
+	      </div><!--/row -->
+
+	      <!-- Cooperativo -->
+	      <div id="cooperativeDiv">
+		<div class="row input-line">
+		  <div class="col-xs-3 col-sm-3">
+		    <label for="cooperative1">Cooperativo:</label>
+		  </div>
+		  <div class="col-xs-1 col-sm-1">
+		    <input type="checkbox" id="cooperative1">
+		  </div><!--/col-sm-1 -->
+
+		  <div class="col-xs-2 col-sm-2">
+		    <label for="cooperativeUmbral1">Umbral:</label>
+		  </div>
+		  <div class="col-xs-2 col-sm-2">
+		    <input type="number" min="0" class="form-control" id="cooperativeUmbral1">
+		  </div>
+
+		  <div class="col-xs-1 col-sm-1">
+		    <button type="button" class="btn btn-primary"  onclick="addCooperativeBot(1)">
+		      <i class="fa fa-plus" aria-hidden="true"></i>
+		    </button>
+		  </div>
+		</div><!--/row -->
+	      </div><!--/#cooperativeDiv -->
+	    </div><!--/tab-pane -->
+	    
+	  </div><!--/tab-content -->
+	</div>
+      </div><!--/modal-body -->
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="createGameButton" onclick="newGameRequest(1)">Crear</button>
+      </div><!--/modal-footer -->
+
+    </div><!--/modal-content -->
+  </div><!--/modal-dialog -->
+</div><!--/modal fade -->
+
+
+<!-- Modal Join Game -->
+<!-- =============== -->
+<div class="modal fade" id="JoinGameModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	  <span aria-hidden="true">&times;</span>
+	</button>
+        <h3 class="modal-title">Unirme a un Juego</h3>
+      </div><!--/modal-header -->
+
+      <div class="modal-body">
+
+	<div>
+	  <!-- Nav tabs -->
+	  <ul class="nav nav-tabs" role="tablist">
+	    <li role="presentation" class="active"><a href="#playerLogin" role="tab" data-toggle="tab">Como jugador</a></li>
+	    <li role="presentation"><a href="#adminLogin" role="tab" data-toggle="tab">Como administrador</a></li>
+	  </ul>
+
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	    <!-- Player login -->
+	    <div role="tabpanel" class="tab-pane active" id="playerLogin">
+	      <!-- Error in login -->
+	      <div id="joinError" class="">
+	      </div>
+	      
+              <form class="form-horizontal">
+		<div class="form-group">
+		  <label for="gameID" class="col-xs-4 col-sm-4 control-label">
+		    Numero de juego:
+		  </label>
+		  <div class="col-xs-4 col-sm-4">
+		    <input type="number" min="0" class="form-control" id="gameID">
+		  </div><!--/col-sm-4 -->
+		</div><!--/form-group -->
+
+		<div class="form-group">
+		  <label for="gameID" class="col-xs-4 col-sm-4 control-label">
+		    Nombre:
+		  </label>
+		  <div class="col-xs-4 col-sm-4">
+		    <input type="text" min="0" class="form-control" id="playerName">
+		  </div><!--/col-sm-4 -->
+
+		  <div class="col-xs-4 col-sm-4">
+		    <button type="button" class="btn btn-primary"  onclick="showKeyInput()">
+		      Tengo una llave
+		    </button>
+		  </div><!--/col-sm- -->
+		</div><!--/form-group -->
+
+		<div class="form-group hide" id="playerKeyInput">
+		  <label for="playerKey" class="col-xs-4 col-sm-4 control-label">
+		    Llave:
+		  </label>
+		  <div class="col-xs-4 col-sm-4">
+		    <input class="form-control" id="playerKey">
+		  </div><!--/col-sm-10 -->
+		</div><!--/form-group -->
+	      </form>
+
+	      <div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+		<button type="button" class="btn btn-primary" onclick="joinGameRequest()">Unirme</button>
+	      </div><!--/modal-footer -->
+	    </div><!--/tab-content -->
+
+	    <!-- Admin loggin -->
+	    <div role="tabpanel" class="tab-pane" id="adminLogin">
+	      <div class="row input-line">
+		<div class="col-xs-4 col-sm-4">
+		  <label for="adminId">Número de juego:</label>
+		</div>
+		<div class="col-xs-4 col-sm-4">
+		  <input type="number" min="0" class="form-control" id="adminId">
+		</div><!--/col-sm-1 -->
+	      </div><!--/row -->
+
+	      <div class="row input-line">
+		<div class="col-xs-4 col-sm-4">
+		  <label for="adminKey">Llave:</label>
+		</div>
+		<div class="col-xs-4 col-sm-4">
+		  <input class="form-control" id="adminKey">
+		</div>
+	      </div><!--/row -->
+
+	      <div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+		<button type="button" class="btn btn-primary" onclick="adminJoinRequest()">Unirme</button>
+	      </div><!--/modal-footer -->
+	    </div><!--/tab-pane -->
+	    
+	  </div><!--/tab-content -->
+	</div>
+      </div><!--/modal-body -->
+    </div><!--/modal-content -->
+  </div><!--/modal-dialog -->
+</div><!--/modal fade -->
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script src="/kuden/js/config.js"></script>
+<script src="/kuden/js/createGame.js"></script>
+<script src="/kuden/js/joinGame.js"></script>
+
+
+    
+    
+    <!-- footer -->
+<!-- ====== -->
+<footer id="footer">
+  <h2 class="header-hidden">Footer</h2>
+  <div class="footer section">
+    <div class="container">
+
+      <div class="footer-texto">
+      </div><!--/footer-texto -->
+	
+    </div><!--/container -->
+  </div><!--/footer -->
+</footer>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+<!-- ========================================================== -->
+<!-- Change nav-bar color -->
+<script src="/kuden/js/change_navbar_color.js"></script>
+
+  </body>
+</html>

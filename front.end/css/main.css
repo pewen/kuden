@@ -1,0 +1,276 @@
+/* Personal CSS */
+
+/* Authors: @fnbellomo
+ */
+
+/****************************************
+ * Base structure
+ ****************************************/
+body {
+    font-family: Helvetica, Arial;
+    position: relative;
+}
+
+.site-name {
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: 15px;
+    line-height: 1.50;
+    color: #333333;
+    text-align: center;
+}
+
+ol, ul {
+    list-style: outside none none;
+}
+
+.list-icons {
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+    font-size: 18px;
+}
+
+.list-icons li {
+    padding: 0 0 15px 0;
+}
+
+blockquote {
+    border-left: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.title {
+    margin-top: 0;
+}
+
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.header-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden;
+}
+
+.main {
+    padding-top: 80px;
+}
+/****************************************
+ * Bootstrap-modal
+ ****************************************/
+.bootstrap-dialog-message {
+    text-align: justify;
+}
+/****************************************
+ * NavBar
+ ****************************************/
+.navbar-inverse {
+    background-color: #000;
+}
+
+.navbar-brand > img {
+    display: block;
+    max-width:250px;
+    margin-top: -10px;
+}
+
+.navbar-brand > img.visible-xs{
+    display: block;
+    max-width:200px;
+    margin-top: -10px;
+    
+}
+
+.navbar-nav{
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float:none;
+}
+
+.navbar-custom {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+    font-weight: bold;
+}
+/****************************************
+ * Waiting players
+ ***************************************/
+.waiting-background {
+    background-image: url("../imgs/banner.png");
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}
+
+.waitingSquare {
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 16px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding-top: 20px;
+    height: 80px;
+}
+
+/****************************************
+ * Box
+ ***************************************/
+#game {
+    border-right: 2px solid rgb(0, 151, 222);
+}
+
+.box-player {
+    background: #FFF none repeat scroll 0% 0%;
+    box-shadow: 3px 4px 15px -6px #000;
+    padding: 20px 25px;
+    position: relative;
+    text-align: left;
+}
+
+.circle-status {
+    position: absolute;
+    background: #a9aaab;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin-top: -15px;
+    margin-left: -20px;
+}
+
+.color-green > .circle-status{
+    background: green;
+}
+
+.color-red > .circle-status{
+    background: red;
+}
+
+.box-def h3 {
+    color: #292636;
+    font-size: 35px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.3em;
+    margin: 0px 0px 20px;
+    border-bottom: 1px solid #D4DFF6;
+    padding: 0px 15px 18px;
+}
+
+.box-def p {
+    color: #87818C;
+    font-size: 19px;
+    letter-spacing: -0.02em;
+    line-height: 1.6em;
+    padding: 0px 15px;
+    text-align: justify;
+}
+/****************************************
+ * Chat
+ ***************************************/
+.chat {
+    position:fixed;
+    bottom:0;
+}
+
+/****************************************
+ * Banner
+ ***************************************/
+#banner {
+    background: linear-gradient(to top, rgba(46, 49, 65, 0.7), rgba(46, 49, 65, 0.7)), url("../imgs/banner.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    color: #ffffff;
+}
+
+#banner > div {
+    padding-top: 15%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#banner h2 {
+    border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+    padding-bottom: 15px;
+    font-size: 2.25em;
+}
+
+.start-buttons {
+    text-align: center;
+    padding-top: 200px;
+}
+
+.input-line{
+    padding-bottom: 15px;
+}
+
+.hide {
+    display:none;
+}
+/****************************************
+ * #Admin
+ ****************************************/
+#admin-info {
+    padding-top: 80px;
+}
+
+.game-info {
+    text-align: left;
+}
+
+/****************************************
+ * #player-info
+ ****************************************/
+#player-info {
+    padding-top: 80px;
+}
+
+.game-info {
+    text-align: left;
+}
+
+/****************************************
+ * Footer
+ ***************************************/
+.footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-texto {
+    text-align: center;
+}
+
+.footer-texto > p {
+    margin-bottom: 0px;
+}
+
+.footer-texto > p > strong {
+    color: #e62b1e;
+}
